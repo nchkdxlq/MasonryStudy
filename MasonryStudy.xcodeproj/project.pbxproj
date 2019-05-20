@@ -24,6 +24,10 @@
 		08E47B96228FA5AF00FCA0A5 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E47B8A228FA5AF00FCA0A5 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		08E47B97228FA5AF00FCA0A5 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E47B8B228FA5AF00FCA0A5 /* MASCompositeConstraint.m */; };
 		08E47B98228FA5AF00FCA0A5 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E47B8E228FA5AF00FCA0A5 /* MASViewAttribute.m */; };
+		08E47B9B228FA8CF00FCA0A5 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E47B9A228FA8CF00FCA0A5 /* BaseViewController.m */; };
+		08E47B9F228FAB9800FCA0A5 /* ChainModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E47B9E228FAB9800FCA0A5 /* ChainModeViewController.m */; };
+		08E47BA22292E16E00FCA0A5 /* UIView+Chainable.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E47BA12292E16E00FCA0A5 /* UIView+Chainable.m */; };
+		08E47BA52292E34300FCA0A5 /* CALayer+Chainable.m in Sources */ = {isa = PBXBuildFile; fileRef = 08E47BA42292E34300FCA0A5 /* CALayer+Chainable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,14 @@
 		08E47B8C228FA5AF00FCA0A5 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		08E47B8D228FA5AF00FCA0A5 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
 		08E47B8E228FA5AF00FCA0A5 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		08E47B99228FA8CF00FCA0A5 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		08E47B9A228FA8CF00FCA0A5 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		08E47B9D228FAB9800FCA0A5 /* ChainModeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChainModeViewController.h; sourceTree = "<group>"; };
+		08E47B9E228FAB9800FCA0A5 /* ChainModeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChainModeViewController.m; sourceTree = "<group>"; };
+		08E47BA02292E16E00FCA0A5 /* UIView+Chainable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Chainable.h"; sourceTree = "<group>"; };
+		08E47BA12292E16E00FCA0A5 /* UIView+Chainable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Chainable.m"; sourceTree = "<group>"; };
+		08E47BA32292E34300FCA0A5 /* CALayer+Chainable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+Chainable.h"; sourceTree = "<group>"; };
+		08E47BA42292E34300FCA0A5 /* CALayer+Chainable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Chainable.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,15 +146,14 @@
 		08E47B42228FA4CE00FCA0A5 /* MasonryStudy */ = {
 			isa = PBXGroup;
 			children = (
-				08E47B43228FA4CE00FCA0A5 /* AppDelegate.h */,
-				08E47B44228FA4CE00FCA0A5 /* AppDelegate.m */,
-				08E47B46228FA4CE00FCA0A5 /* ViewController.h */,
-				08E47B47228FA4CE00FCA0A5 /* ViewController.m */,
+				08E47B9C228FA8DC00FCA0A5 /* ViewController */,
 				08E47B75228FA58900FCA0A5 /* masonry */,
 				08E47B4C228FA4D100FCA0A5 /* Assets.xcassets */,
 				08E47B4E228FA4D100FCA0A5 /* LaunchScreen.storyboard */,
 				08E47B51228FA4D100FCA0A5 /* Info.plist */,
 				08E47B52228FA4D100FCA0A5 /* main.m */,
+				08E47B43228FA4CE00FCA0A5 /* AppDelegate.h */,
+				08E47B44228FA4CE00FCA0A5 /* AppDelegate.m */,
 			);
 			path = MasonryStudy;
 			sourceTree = "<group>";
@@ -168,33 +179,50 @@
 		08E47B75228FA58900FCA0A5 /* masonry */ = {
 			isa = PBXGroup;
 			children = (
-				08E47B89228FA5AF00FCA0A5 /* MASCompositeConstraint.h */,
-				08E47B8B228FA5AF00FCA0A5 /* MASCompositeConstraint.m */,
-				08E47B7C228FA5AE00FCA0A5 /* MASConstraint.h */,
-				08E47B85228FA5AE00FCA0A5 /* MASConstraint.m */,
-				08E47B7A228FA5AE00FCA0A5 /* MASConstraint+Private.h */,
-				08E47B8D228FA5AF00FCA0A5 /* MASConstraintMaker.h */,
-				08E47B7F228FA5AE00FCA0A5 /* MASConstraintMaker.m */,
-				08E47B80228FA5AE00FCA0A5 /* MASLayoutConstraint.h */,
-				08E47B81228FA5AE00FCA0A5 /* MASLayoutConstraint.m */,
 				08E47B7D228FA5AE00FCA0A5 /* Masonry.h */,
 				08E47B87228FA5AF00FCA0A5 /* MASUtilities.h */,
+				08E47B80228FA5AE00FCA0A5 /* MASLayoutConstraint.h */,
+				08E47B81228FA5AE00FCA0A5 /* MASLayoutConstraint.m */,
 				08E47B76228FA5AE00FCA0A5 /* MASViewAttribute.h */,
 				08E47B8E228FA5AF00FCA0A5 /* MASViewAttribute.m */,
+				08E47B7A228FA5AE00FCA0A5 /* MASConstraint+Private.h */,
+				08E47B7C228FA5AE00FCA0A5 /* MASConstraint.h */,
+				08E47B85228FA5AE00FCA0A5 /* MASConstraint.m */,
 				08E47B83228FA5AE00FCA0A5 /* MASViewConstraint.h */,
 				08E47B78228FA5AE00FCA0A5 /* MASViewConstraint.m */,
-				08E47B82228FA5AE00FCA0A5 /* NSArray+MASAdditions.h */,
-				08E47B86228FA5AE00FCA0A5 /* NSArray+MASAdditions.m */,
-				08E47B88228FA5AF00FCA0A5 /* NSArray+MASShorthandAdditions.h */,
-				08E47B77228FA5AE00FCA0A5 /* NSLayoutConstraint+MASDebugAdditions.h */,
-				08E47B8A228FA5AF00FCA0A5 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				08E47B89228FA5AF00FCA0A5 /* MASCompositeConstraint.h */,
+				08E47B8B228FA5AF00FCA0A5 /* MASCompositeConstraint.m */,
+				08E47B8D228FA5AF00FCA0A5 /* MASConstraintMaker.h */,
+				08E47B7F228FA5AE00FCA0A5 /* MASConstraintMaker.m */,
 				08E47B7E228FA5AE00FCA0A5 /* View+MASAdditions.h */,
 				08E47B84228FA5AE00FCA0A5 /* View+MASAdditions.m */,
 				08E47B8C228FA5AF00FCA0A5 /* View+MASShorthandAdditions.h */,
+				08E47B82228FA5AE00FCA0A5 /* NSArray+MASAdditions.h */,
+				08E47B86228FA5AE00FCA0A5 /* NSArray+MASAdditions.m */,
+				08E47B88228FA5AF00FCA0A5 /* NSArray+MASShorthandAdditions.h */,
 				08E47B79228FA5AE00FCA0A5 /* ViewController+MASAdditions.h */,
 				08E47B7B228FA5AE00FCA0A5 /* ViewController+MASAdditions.m */,
+				08E47B77228FA5AE00FCA0A5 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				08E47B8A228FA5AF00FCA0A5 /* NSLayoutConstraint+MASDebugAdditions.m */,
 			);
 			path = masonry;
+			sourceTree = "<group>";
+		};
+		08E47B9C228FA8DC00FCA0A5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				08E47B99228FA8CF00FCA0A5 /* BaseViewController.h */,
+				08E47B9A228FA8CF00FCA0A5 /* BaseViewController.m */,
+				08E47B46228FA4CE00FCA0A5 /* ViewController.h */,
+				08E47B47228FA4CE00FCA0A5 /* ViewController.m */,
+				08E47B9D228FAB9800FCA0A5 /* ChainModeViewController.h */,
+				08E47B9E228FAB9800FCA0A5 /* ChainModeViewController.m */,
+				08E47BA02292E16E00FCA0A5 /* UIView+Chainable.h */,
+				08E47BA12292E16E00FCA0A5 /* UIView+Chainable.m */,
+				08E47BA32292E34300FCA0A5 /* CALayer+Chainable.h */,
+				08E47BA42292E34300FCA0A5 /* CALayer+Chainable.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,11 +359,15 @@
 				08E47B90228FA5AF00FCA0A5 /* ViewController+MASAdditions.m in Sources */,
 				08E47B95228FA5AF00FCA0A5 /* NSArray+MASAdditions.m in Sources */,
 				08E47B97228FA5AF00FCA0A5 /* MASCompositeConstraint.m in Sources */,
+				08E47B9F228FAB9800FCA0A5 /* ChainModeViewController.m in Sources */,
+				08E47B9B228FA8CF00FCA0A5 /* BaseViewController.m in Sources */,
 				08E47B94228FA5AF00FCA0A5 /* MASConstraint.m in Sources */,
+				08E47BA22292E16E00FCA0A5 /* UIView+Chainable.m in Sources */,
 				08E47B53228FA4D100FCA0A5 /* main.m in Sources */,
 				08E47B92228FA5AF00FCA0A5 /* MASLayoutConstraint.m in Sources */,
 				08E47B93228FA5AF00FCA0A5 /* View+MASAdditions.m in Sources */,
 				08E47B45228FA4CE00FCA0A5 /* AppDelegate.m in Sources */,
+				08E47BA52292E34300FCA0A5 /* CALayer+Chainable.m in Sources */,
 				08E47B8F228FA5AF00FCA0A5 /* MASViewConstraint.m in Sources */,
 				08E47B91228FA5AF00FCA0A5 /* MASConstraintMaker.m in Sources */,
 				08E47B98228FA5AF00FCA0A5 /* MASViewAttribute.m in Sources */,
